@@ -11,4 +11,12 @@ const widget = {
     resize: () => console.log('Resizing...')
 };
 console.log(widget);
+let quantity = 100;
+console.log(quantity);
+const user1 = {
+    id: 1,
+    name: 'Harun',
+    email: 'harun@example.com'
+};
+console.log(user1);
 //# sourceMappingURL=interfaces.js.map
