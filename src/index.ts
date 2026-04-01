@@ -53,11 +53,15 @@ console.log(calcuateTax(100000, 2026));
 function kgToLbs(weight: number | string): number {
     if (typeof weight === 'number') {
         return weight * 2.20462;
-    } else {
+    } 
+    // If weight is a string, attempt to parse it as a number
+    else {
         const parsedWeight = parseFloat(weight);
+        // Check if the parsed weight is a valid number
         if (isNaN(parsedWeight)) {
             throw new Error('Invalid weight format');
         }
+        // Convert the parsed weight to pounds
         return parsedWeight * 2.20462;
     }
 } 
