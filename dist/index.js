@@ -1,15 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-//function calcuateTax(income : number, taxYear : number ) : number {  
-//    if (taxYear < 2025  ) {
-//        return income  * 0.1;
-function calcuateTax(income, taxYear) {
-    if (taxYear < 2025) {
-        return income * 0.1;
-    }
-    return income * 0.2;
-}
-console.log(calcuateTax(100000, 2026));
 //Array
 let numbers = [488, 450, 920, 2500];
 console.log(numbers);
@@ -42,4 +32,28 @@ const car = {
     year: 2020
 };
 console.log(car.type);
+//function calcuateTax(income : number, taxYear : number ) : number {  
+//    if (taxYear < 2025  ) {
+//        return income  * 0.1;
+function calcuateTax(income, taxYear) {
+    if (taxYear < 2025) {
+        return income * 0.1;
+    }
+    return income * 0.2;
+}
+console.log(calcuateTax(100000, 2026));
+function kgToLbs(weight) {
+    if (typeof weight === 'number') {
+        return weight * 2.20462;
+    }
+    else {
+        const parsedWeight = parseFloat(weight);
+        if (isNaN(parsedWeight)) {
+            throw new Error('Invalid weight format');
+        }
+        return parsedWeight * 2.20462;
+    }
+}
+console.log(kgToLbs(100)); // Output: 220.462
+console.log(kgToLbs('150')); // Output: 330.693
 //# sourceMappingURL=index.js.map
